@@ -57,20 +57,25 @@ const Game = () => {
         );
 
     return (
-        <div className={styles.game}>
-            <div className={styles.gameBoard}>
-                <Board
-                    squares={current.squares}
-                    onClick={(i) => handleClick(i)}
-                />
+        <>
+            <div className={styles.game}>
+                <div className={styles.gameBoard}>
+                    <Board
+                        squares={current.squares}
+                        onClick={(i) => handleClick(i)}
+                    />
+                </div>
+                <div className={styles.gameInfo}>
+                    <div>{tip}</div>
+                    <ol>
+                        <Moves history={history} jumpTo={jumpTo} />
+                    </ol>
+                </div>
             </div>
-            <div className={styles.gameInfo}>
-                <div>{tip}</div>
-                <ol>
-                    <Moves history={history} jumpTo={jumpTo} />
-                </ol>
-            </div>
-        </div>
+            <br />
+            源代码：
+            <a href="https://github.com/Phil-Libra/tic-tac-toe-hook">Github</a>
+        </>
     );
 };
 
