@@ -72,9 +72,10 @@ const Game = () => {
                     </ol>
                 </div>
             </div>
-            <br />
-            源代码：
-            <a href="https://github.com/Phil-Libra/tic-tac-toe-hook">Github</a>
+            <div className={styles.source}>
+                源代码：
+                <a href="https://github.com/Phil-Libra/tic-tac-toe-hook">Github</a>
+            </div>
         </>
     );
 };
